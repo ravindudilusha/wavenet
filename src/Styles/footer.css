@@ -1,0 +1,28 @@
+.footer-title{
+    font-size: 16px;
+    font-weight: 700;
+}
+ footer{
+    border-top-left-radius: 20px; /* Round the top-left corner */
+    border-top-right-radius: 20px; /* Round the top-left corner */
+ }
+
+ .footer-content{
+    font-size: 14px;
+    line-height: 25px;
+ }
+
+ hr {
+    height: 1px; 
+    background-color: rgba(0, 0, 0, 0.049); /* Sets the color with light opacity (alpha channel) */
+  }
+
+  .social-links svg {
+    font-size: 24px; /* Increases the size of the icons */
+    cursor: pointer; /* Changes the cursor to a pointer when hovering */
+    transition: transform 0.3s ease; /* Adds a smooth transition effect */
+  }
+  
+  .social-links svg:hover {
+    transform: scale(1.2); /* Increases the size of the icon when hovered */
+  }
