@@ -1,16 +1,27 @@
-import React from "react";
-import "../Styles/Newtones.css";
+import React, { useEffect } from "react";
+import "../Styles/Newtones.css"; // Your custom styles
 import { FaArrowRight } from "react-icons/fa6";
 import { IoShareSocialOutline } from "react-icons/io5";
 import { FaPlay } from "react-icons/fa";
 import musicplay7 from "../Assests/musicplay7.jpeg";
 import musicplay8 from "../Assests/musicplay8.jpeg";
-import musicplay3 from "../Assests/musicplay3.jpeg";
-import musicplay4 from "../Assests/musicplay4.jpeg";
-import musicplay5 from "../Assests/musicplay5.jpeg";
-import musicplay6 from "../Assests/musicplay6.jpeg";
+import musicplay9 from "../Assests/musicplay9.jpg";
+import musicplay10 from "../Assests/musicplay10.jpeg";
+import musicplay11 from "../Assests/musicplay11.jpg";
+import musicplay12 from "../Assests/musicplay12.jpg";
+import AOS from 'aos'; // Import AOS library
+import 'aos/dist/aos.css'; // Import AOS styles
 
 function PopularTones() {
+  useEffect(() => {
+    // Initialize AOS when the component mounts
+    AOS.init({
+      duration: 1000,  // Animation duration
+      easing: 'ease-out',  // Easing function for the animation
+      once: true,  // Whether animation should happen once
+    });
+  }, []);
+
   const musicCards = [
     { 
       title: "Baby", 
@@ -27,30 +38,37 @@ function PopularTones() {
       image: musicplay8 
     },
     { 
-      title: "Bad Guy", 
-      artist: "Billie Eilish", 
-      price: "$9.99", 
+      title: "Titanium", 
+      artist: "David Guttea", 
+      price: "$10.99", 
       monthly: "$0.89/mo", 
-      image: musicplay3 
+      image: musicplay9 
     },
     { 
-      title: "Blinding Lights", 
-      artist: "The Weeknd", 
-      price: "$11.99", 
+      title: "The Nights", 
+      artist: "Avicii", 
+      price: "$12.99", 
       monthly: "$1.19/mo", 
-      image: musicplay4 
+      image: musicplay10 
     },
     { 
-      title: "Levitating", 
-      artist: "Dua Lipa", 
-      price: "$13.99", 
-      monthly: "$1.39/mo", 
-      image: musicplay5 
+      title: "Ciao Adios", 
+      artist: "Anne Marie", 
+      price: "$11.99", 
+      monthly: "$1.99/mo", 
+      image: musicplay11 
+    },
+    { 
+      title: "We Don't Talk Anymore", 
+      artist: "Charlie Puth", 
+      price: "$10.99", 
+      monthly: "$0.99/mo", 
+      image: musicplay12 
     },
   ];
 
   return (
-    <div className="mt-5 container">
+    <div className="mt-4 container">
       {/* Header */}
       <div className="heading-container">
         <p className="heading">Popular tones</p>
@@ -60,10 +78,13 @@ function PopularTones() {
         </div>
       </div>
 
-      {/* Music Cards */}
+      {/* Music Cards with AOS Animation */}
       <div className="row">
         {musicCards.map((card, index) => (
-          <div className="col-md-4 mb-4" key={index}>
+          <div
+            className="col-md-4 mb-4"
+            key={index}
+          >
             <div className="card">
               <div className="row g-0">
                 <div className="col-4 position-relative d-flex align-items-center">

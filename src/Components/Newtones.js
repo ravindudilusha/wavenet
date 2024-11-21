@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "../Styles/Newtones.css";
 import { FaArrowRight } from "react-icons/fa6";
 import { FaPlay } from "react-icons/fa";
@@ -9,8 +9,18 @@ import musicplay3 from "../Assests/musicplay3.jpeg";
 import musicplay4 from "../Assests/musicplay4.jpeg";
 import musicplay5 from "../Assests/musicplay5.jpeg";
 import musicplay6 from "../Assests/musicplay6.jpeg";
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 function Newtones() {
+  useEffect(() => {
+    AOS.init({
+      duration: 1000,  // animation duration in milliseconds
+      easing: 'ease-in-out',
+      once: true,  // ensures animations only happen once
+    });
+  }, []);
+
   const musicCards = [
     { 
       title: "Blank Space", 
