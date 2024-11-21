@@ -1,58 +1,51 @@
 import React from "react";
 import "../Styles/Newtones.css";
 import { FaArrowRight } from "react-icons/fa6";
-import { FaPlay } from "react-icons/fa";
 import { IoShareSocialOutline } from "react-icons/io5";
-import musicplay1 from "../Assests/musicplay1.jpg";
-import musicplay2 from "../Assests/musicplay2.jpeg";
+import { FaPlay } from "react-icons/fa";
+import musicplay7 from "../Assests/musicplay7.jpeg";
+import musicplay8 from "../Assests/musicplay8.jpeg";
 import musicplay3 from "../Assests/musicplay3.jpeg";
 import musicplay4 from "../Assests/musicplay4.jpeg";
 import musicplay5 from "../Assests/musicplay5.jpeg";
 import musicplay6 from "../Assests/musicplay6.jpeg";
 
-function Newtones() {
+function PopularTones() {
   const musicCards = [
     { 
-      title: "Blank Space", 
-      artist: "Taylor Swift", 
-      price: "$10.99", 
-      monthly: "$0.99/mo", 
-      image: musicplay1 
+      title: "Baby", 
+      artist: "Justin Bieber", 
+      price: "$14.99", 
+      monthly: "$2.99/mo", 
+      image: musicplay7 
     },
     { 
-      title: "Down", 
-      artist: "Jay Sean", 
+      title: "On My Way", 
+      artist: "Alan Walker", 
       price: "$11.99", 
       monthly: "$1.29/mo", 
-      image: musicplay2 
+      image: musicplay8 
     },
     { 
-      title: "Perfect", 
-      artist: "Ed Sheeran", 
+      title: "Bad Guy", 
+      artist: "Billie Eilish", 
       price: "$9.99", 
       monthly: "$0.89/mo", 
       image: musicplay3 
     },
     { 
-      title: "No Lie", 
-      artist: "Dua Lipa", 
-      price: "$12.99", 
-      monthly: "$1.99/mo", 
+      title: "Blinding Lights", 
+      artist: "The Weeknd", 
+      price: "$11.99", 
+      monthly: "$1.19/mo", 
       image: musicplay4 
     },
     { 
-      title: "APT.", 
-      artist: "Bruno Mars", 
-      price: "$11.99", 
-      monthly: "$1.99/mo", 
+      title: "Levitating", 
+      artist: "Dua Lipa", 
+      price: "$13.99", 
+      monthly: "$1.39/mo", 
       image: musicplay5 
-    },
-    { 
-      title: "Estside.", 
-      artist: "Kalid", 
-      price: "$10.99", 
-      monthly: "$1.99/mo", 
-      image: musicplay6 
     },
   ];
 
@@ -60,7 +53,7 @@ function Newtones() {
     <div className="mt-5 container">
       {/* Header */}
       <div className="heading-container">
-        <p className="heading">New tones</p>
+        <p className="heading">Popular tones</p>
         <div className="Seemore-container">
           <p className="m-0 Seemore-heading">See more</p>
           <FaArrowRight />
@@ -107,4 +100,4 @@ function Newtones() {
   );
 }
 
-export default Newtones;
+export default PopularTones;
