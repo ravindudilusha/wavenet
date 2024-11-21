@@ -1,0 +1,74 @@
+.heading{
+    font-size: 25px;
+    text-align: left;
+}
+.heading-container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.Seemore-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+}
+
+.card-title{
+    font-size: 18px;
+}
+
+.card-text{
+    font-size: 14px;
+    font-weight: 600;
+    color: #757575;
+}
+
+.price-text{
+    font-size: 16px;
+    color: #23418C;
+    font-weight: 700;
+}
+
+.music-image {
+    border-radius: 14px; /* Adjust corner rounding */
+    height: 155px !important;
+    width: 100% !important;
+  }
+
+.monthly-payment{
+    font-size: 14px;
+    font-weight: 600px;
+}
+
+.buynow-button{
+    background-color: #23418C !important; /* Custom green color */
+    color: white; /* Text color */
+    border: none; /* Remove border */
+    padding: 8px 18px; /* Adjust padding */
+    border-radius: 5px; /* Optional: rounded corners */
+    font-size: 16px; /* Font size */
+    cursor: pointer; /* Pointer on hover */
+}
+
+/* Play icon container */
+.play-icon-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(0, 0, 0, 0.6); /* Semi-transparent background */
+    border-radius: 50%;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .play-icon {
+    color: #fff;
+    font-size: 20px;
+    cursor: pointer;
+  }
+  
