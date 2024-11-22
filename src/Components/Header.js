@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import logo from "../Assests/logo.svg";
 import "../Styles/Header.css";
 import { Dropdown } from "react-bootstrap";
@@ -6,27 +6,35 @@ import Flag from "react-world-flags";
 import { CiSearch } from "react-icons/ci";
 
 function Header() {
+  const [isNavbarOpen, setIsNavbarOpen] = useState(false);
+
+  const toggleNavbar = () => {
+    setIsNavbarOpen(!isNavbarOpen);
+  };
+
   return (
     <div>
-      {/* Navbar using Bootstrap HTML format */}
       <nav className="navbar navbar-expand-lg navbar-light bg-light">
         <div className="container">
           <a className="navbar-brand" href="#home">
-            <img src={logo} className="logo-image" />
+            <img src={logo} className="logo-image" alt="Logo" />
           </a>
           <button
-            className="navbar-toggler"
+            className={`navbar-toggler ${isNavbarOpen ? "" : "collapsed"}`}
             type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarNav"
-            aria-controls="navbarNav"
-            aria-expanded="false"
+            onClick={toggleNavbar}
+            aria-expanded={isNavbarOpen}
             aria-label="Toggle navigation"
           >
             <span className="navbar-toggler-icon"></span>
           </button>
-          <div className="collapse navbar-collapse" id="navbarNav">
-            <ul className="navbar-nav me-auto mx-auto ">
+          <div
+            className={`collapse navbar-collapse ${
+              isNavbarOpen ? "show" : ""
+            }`}
+            id="navbarNav"
+          >
+            <ul className="navbar-nav me-auto mx-auto">
               <li className="nav-item">
                 <a className="nav-link" href="#features">
                   Home
@@ -52,7 +60,6 @@ function Header() {
                   >
                     <Flag code="US" style={{ width: 20, height: 15 }} /> EN{" "}
                   </Dropdown.Toggle>
-
                   <Dropdown.Menu>
                     <Dropdown.Item
                       href="#/action-1"
@@ -95,13 +102,13 @@ function Header() {
           </div>
         </div>
       </nav>
-      <hr className="m-0 p-0"></hr>
+      <hr className="m-0 p-0" />
       <div className="row">
         <div className="col-md-4 col-12 container mt-3">
           <div className="position-relative">
             <input
               type="text"
-              className="form-control  ps-5 search-input" // Adds padding-left for the icon
+              className="form-control ps-5 search-input"
               placeholder="Search ringtone"
             />
             <CiSearch
@@ -110,7 +117,7 @@ function Header() {
                 top: "50%",
                 left: "10px",
                 transform: "translateY(-50%)",
-              }} // Centers the icon vertically
+              }}
             />
           </div>
         </div>

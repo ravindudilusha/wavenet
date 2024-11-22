@@ -3,6 +3,8 @@
     height: auto;
 }
 
+
+
 .login-button {
     background-color: #23418C; /* Custom green color */
     color: white; /* Text color */
@@ -23,7 +25,34 @@
   }
 
   .search-input{
-    background-color: rgba(0, 0, 0, 0.06) !important; /* Grey background color */
-  padding-right: 20px; /* Add space on the right side of the input for the icon */
+    background-color: rgba(0, 0, 0, 0.06) !important;
+  padding-right: 20px; 
   border: none !important;
   }
+
+  .navbar-collapse {
+    transition: height 2s ease, opacity 3s ease !important;
+  }
+  
+  .navbar-collapse.show {
+    display: block;
+    height: auto;
+    opacity: 1;
+  }
+  
+  
+  /* Search input and icon styling */
+  .search-input {
+    padding-left: 40px; 
+  }
+  
+  .position-absolute {
+    position: absolute;
+  }
+  
+ 
+  .custom-dropdown-toggle {
+    border: none;
+    background: transparent;
+  }
+  
