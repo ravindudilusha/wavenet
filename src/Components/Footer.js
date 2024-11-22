@@ -52,7 +52,7 @@ function Footer() {
       </div>
       <hr></hr>
       <div className="d-flex justify-content-between mt-3 small">
-        <p>© 2024 Your Company. All rights reserved.</p>
+        <p>© 2024 Wavenet. All rights reserved.</p>
         <div className='d-flex gap-2 social-links'>
         <FaFacebookSquare />
         <RiInstagramFill />
